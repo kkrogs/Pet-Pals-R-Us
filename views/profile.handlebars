@@ -1,48 +1,102 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+<h1>We've Got You!</h1>
+      
+      <!-- Cart table -->
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ShoppingcartId</th>
+            <th scope="col">UserId</th>
+            <th scope="col">ItemId</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="cartTableBody">
+          <!-- Cart data -->
+          <!-- /Cart data -->
+        </tbody>
+      </table>
+      <!-- /Cart table -->
+
+      <button type="button" class="btn btn-secondary" id="continueBrowsing">
+        Continue browsing
+      </button>
+      <button type="button" class="btn btn-secondary" id="purchasesHistory">
+        Purchases history
+      </button>
+      <button type="button" class="btn btn-primary" id="confirmPurchase">
+        Confirm purchase!
+      </button>
+
+      <div id="purchasesDiv">
+        <h1 class="mt-5">Purchases history</h1>
+
+        <!-- Purchases table -->
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">PurchaseId</th>
+              <th scope="col">UserId</th>
+              <th scope="col">ItemId</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody id="purchasesTableBody">
+            <!-- Purchases data -->
+            <!-- /Purchases data -->
+          </tbody>
+        </table>
+      </div>
+      <!-- /Purchases table -->
+
+      <!-- Purchase confirmation modal -->
+      <div
+        class="modal fade"
+        id="purchaeConfirmationModal"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="purchaeConfirmationModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="purchaeConfirmationModal">
+                Purchase confirmation
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>Payment received.</p>
+              <p>Enjoy!!</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Purchase confirmation modal -->
+
+  
   </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Categories</h3>
-
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 <script src="./js/profile.js"></script>
