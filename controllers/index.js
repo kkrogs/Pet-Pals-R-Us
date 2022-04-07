@@ -1,9 +1,7 @@
 const router = require('express').Router();
-
-const apiRoutes = require('./api');
-//any html we are going to send back will go into homeroutes
 const homeRoutes = require('./homeRoutes');
-
+const apiRoutes = require('./api');
+//http://localhost:3001/api/ is our current route. If I see /api that means I am doing some kind of data exchange. In this case, we're going to the database
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 
