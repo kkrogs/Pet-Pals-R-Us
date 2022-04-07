@@ -12,9 +12,10 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+//If the response is ok, that means that they are logged in, redirect them to the /profile page
+/// http://localhost:3001/login -- this is done from the login page form
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
+      // If successful, redirect the browser to the profile page http://localhost:3001/profile
       document.location.replace('/profile');
     } else {
       alert(response.statusText);
