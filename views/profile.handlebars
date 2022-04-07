@@ -1,26 +1,38 @@
-<div class="main">
-  <form action="/action_page.php">
-  <label for="fname">Search Product:</label>
-  <input type="text" id="fname" name="fname"><br><br> </form>
-  <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="https://picsum.photos/500/300/?image=11" alt="Avatar" style="width:100%"></div>
-        <div class="card_content">
-          <h2 class="card_title">Product1</h2>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
-        <div class="card_content">
-          <h2 class="card_title">Product2</h2>
-        </div>
-      </div>
-    </li>
-   
-      </div>
-    </li>
-  </ul>
-</div>
+
+<section>
+  <h2 class="title">Add new pet</h2><hr>
+
+  <form class="cards-item">
+    <div>
+      <label for="post-title" class="mx-2">Pet name:</label>
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="petName">
+    </div>
+
+     <div>
+      <label for="post-title" class="mx-2">Type:</label>
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="type">
+    </div>
+
+     <div>
+      <label for="post-title" class="mx-2">Tag:</label>
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="tag">
+    </div>
+
+     <div>
+      <label for="post-title" class="mx-2">notes:</label>
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="notes">
+    </div>
+
+     <div>
+      <label for="post-title" class="mx-2">Pet owner name:</label>
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="petOwner">
+    </div>
+ 
+
+
+    <button type="submit" class="btn-success mt-3 mx-3 rounded">Add pet</button>
+  </form>
+</section>
+
+<a href="/dashboard"><button class="cards" id="back"> &larr; Back to Dashboard</button></a>
+
