@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-
+//current route is /
+//This is the very first page we are taken to is the homeroutes file. GET is what we use by default in our browser.
+//this is the http://localhost:Port/ //If we have nothing after the last slash, it is our root route. If we GET to the route route we are expecting to get back to the home page, we can see athat on line 23
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -26,7 +28,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//I can go to this from the browser address bar http://localhost:3001/project/:id id would be replaced with actual project ID
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
@@ -49,7 +51,7 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+// Use withAuth middleware to prevent access to route. withAuth is a helper that checks to see if the person is logged in. Anytime it is showing someone's profile so they can add, delete, or edit a pet, they need to check the withAuth
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
