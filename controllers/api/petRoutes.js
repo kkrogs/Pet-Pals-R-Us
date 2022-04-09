@@ -2,92 +2,109 @@ const router = require('express').Router();
 const { Pet } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-<<<<<<< HEAD:controllers/api/petRoutes.js
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newPet = await Pet.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
+//new code
+// once they signup from the signup form for pets, the form data is sent to this api users POST -- see first post below
+//The current route for this file is: http://localhost:3001/api/pets
 
-    res.status(200).json(newPet);
+router.post('/', async (req, res) => {
+  console.log("petsRoutes")
+  try {
+    const petData = await Pet.create(req.body);
+    console.log("petData")
+    console.log(petData)
+    req.session.save(() => {
+      req.session.pet_id = petData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(petData);
+    });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const petData = await Pet.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
 
-    if (!petData) {
-      res.status(404).json({ message: 'No pet found with this id!' });
-      return;
-    }
 
-    res.status(200).json(petData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-=======
 
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://amazon-price1.p.rapidapi.com/search?keywords=Dog%20Collar&marketplace=US",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Host": "amazon-price1.p.rapidapi.com",
-		"X-RapidAPI-Key": "14de605de7msh97ddb17e777614dp14d459jsn4613eeb38e45"
-	}
-};
 
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
+
+
+
+
+// router.get('/pet', withAuth, async(req,res) => {
+
+//   try {
+//     const petData = await Pet.findAll(
+//       {
+//         include: [{ model: Person }
+//       }
+//     );
+
+//     if (!petData) {
+//       res.status(404).json({ message: 'There was no information' });
+//       return;
+//     }
+
+//     res.status(200).json(petData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
 // });
 
-//Test API functionality ^^
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// old code
 // router.post('/', withAuth, async (req, res) => {
 //   try {
-//     const newProject = await Project.create({
+//     const newPet = await Pet.create({
 //       ...req.body,
 //       user_id: req.session.user_id,
 //     });
 
-//     res.status(200).json(newProject);
+//     res.status(200).json(newPet);
 //   } catch (err) {
 //     res.status(400).json(err);
 //   }
 // });
 
-// router.delete('/:id', withAuth, async (req, res) => {
+// router.delete('/pet', withAuth, async (req, res) => {
 //   try {
-//     const projectData = await Project.destroy({
+//     const petData = await Pet.destroy({
 //       where: {
 //         id: req.params.id,
 //         user_id: req.session.user_id,
 //       },
 //     });
 
-//     if (!projectData) {
-//       res.status(404).json({ message: 'No project found with this id!' });
+//     if (!petData) {
+//       res.status(404).json({ message: 'No pet found' });
 //       return;
 //     }
 
-//     res.status(200).json(projectData);
+//     res.status(200).json(petData);
 //   } catch (err) {
 //     res.status(500).json(err);
 //   }
 // });
->>>>>>> main:controllers/api/projectRoutes.js
 
 module.exports = router;
