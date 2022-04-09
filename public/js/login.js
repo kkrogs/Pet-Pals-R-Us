@@ -22,7 +22,7 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
+//Same as block below but gather pet name
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
