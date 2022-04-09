@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Pet } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+// nice
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPet = await Pet.create({
