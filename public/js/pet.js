@@ -19,7 +19,7 @@ const petFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/search');
+        document.location.replace('/pets');
       } else {
         alert(response.statusText);
       }
