@@ -103,4 +103,24 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/pets', async(req, res) => {
+try{
+  const petData = await Pet.findAll({
+    where:{user_id:req.session.user_id},
+    include:[User]
+  })
+  console.log(petData)
+  if (petData) {
+    const pet = petData.get({plain:true})
+    res.render('pets', {pet});
+  }
+  
+}
+catch(err){res.status(500).json(err)}
+
+
+ 
+});
+
+
 module.exports = router;
