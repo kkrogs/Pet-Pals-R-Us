@@ -1,8 +1,64 @@
+<head>
+
+              <title>Kourtneys Team Profile Generator</title>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+            </head>
+            <body>
+              <div class="main">
+                  {{#each pet}} 
+                <h1> {{pet.name}}</h1>
+                  {{/each}}
+                <h1>Pet Information</h1>
+                <ul class="cards">
+                  <li class="cards_item">
+                    <div class="card">
+                     
+                      <div class="card_content">
+                        <h2 class="card_title">Pet Name Here</h2>
+                        <p class="card_text">Breed: </p>
+                        <p class="card_text">Toys: </p>
+                        <p class="card_text">Notes: </p>
+                      </div>
+                    </div>
+                  </li>
+                  
+                    <li class="cards_item">
+                      <div class="card">
+                       
+                        <div class="card_content">
+                          <h2 class="card_title">Pet Name Here</h2>
+                          <p class="card_text">Breed: </p>
+                          <p class="card_text">Toys: </p>
+                          <p class="card_text">Notes: </p>
+                        </div>
+                      </div>
+                    </li>
+                    
+                      <li class="cards_item">
+                        <div class="card">
+                         
+                          <div class="card_content">
+                            <h2 class="card_title">Pet Name Here</h2>
+                            <p class="card_text">Breed: </p>
+                            <p class="card_text">Toys: </p>
+                            <p class="card_text">Notes: </p>
+                          </div>
+                        </div>
+                      </li>
+                  
+                    
+                      
+                </ul>
+              </div>
+
+
+</body>
+
+
 <div>
 
-{{#each pet}} 
-<h1> {{pet.name}}</h1>
-{{/each}}
 
-</div>
+
 <script src="./js/petHb.js"></script>

@@ -103,7 +103,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/pets', async(req, res) => {
+router.get('/search', async(req, res) => {
 try{
   const petData = await Pet.findAll({
     where:{user_id:req.session.user_id},
