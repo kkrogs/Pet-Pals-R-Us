@@ -1,10 +1,10 @@
 [
     {
   "name": "Sparky",
-  "type": "Dachshund",
-  "tag": "6",
+  "breed": "Dachshund",
+  "toys": "squeaky toy",
   "notes": "eats a lot",
-  "owner": "Larry"
+  "user_id": 1
     }
 
 
