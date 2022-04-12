@@ -66,22 +66,17 @@
 
 {{#each pets as |pet| }}
 <div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_pet}}}
-      <a><Div>Pet name;{{pet.name}}</Div> <ul><li>Breed:{{pet.breed}} </li><li>Toy:{{pet.toys}}</li> <li>Notes:{{pet.notes}}</li></ul></a>
-    </h2>
-       <div class="col-md-4">
-        <button type="button" class="btn btn-sm btn-danger" id="delete-pet">DELETE</button>
-      </div>
-
-  </div> 
-  <div class="col-md-7">
-    <p>
-      {{pet.Notes}}
-    </p>
-  </div>
+  <li class="cards_item">
+                      <div class="card">
+                       
+                        <div class="card_content">
+                          <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
+                          <p class="card_text">Breed:{{pet.breed}} </p>
+                          <p class="card_text">Toys:{{pet.toys}} </p>
+                          <p class="card_text">Notes:{{pet.notes}} </p>
+                        </div>
+                      </div>
+   </li>
 </div>
 {{/each}}
    
