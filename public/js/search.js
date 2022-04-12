@@ -1,5 +1,6 @@
-console.log("hello world console");
 
+
+console.log("hello world console");
 
 //need to add event listener to search bar so that event happens when button is clicked.
 
