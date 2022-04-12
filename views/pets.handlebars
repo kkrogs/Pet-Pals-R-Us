@@ -1,5 +1,4 @@
-<head>
-
+{{!-- <head>
               <title>Kourtneys Team Profile Generator</title>
               <meta charset="UTF-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,10 +15,10 @@
                     <div class="card">
                      
                       <div class="card_content">
-                        <h2 class="card_title">Pet Name Here</h2>
-                        <p class="card_text">Breed: </p>
-                        <p class="card_text">Toys: </p>
-                        <p class="card_text">Notes: </p>
+                        <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
+                        <p class="card_text">Breed:{{pet.breed}} </p>
+                        <p class="card_text">Toys:{{pet.toys}} </p>
+                        <p class="card_text">Notes:{{pet.notes}} </p>
                       </div>
                     </div>
                   </li>
@@ -28,10 +27,10 @@
                       <div class="card">
                        
                         <div class="card_content">
-                          <h2 class="card_title">Pet Name Here</h2>
-                          <p class="card_text">Breed: </p>
-                          <p class="card_text">Toys: </p>
-                          <p class="card_text">Notes: </p>
+                          <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
+                          <p class="card_text">Breed:{{pet.breed}} </p>
+                          <p class="card_text">Toys:{{pet.toys}} </p>
+                          <p class="card_text">Notes:{{pet.notes}} </p>
                         </div>
                       </div>
                     </li>
@@ -40,10 +39,10 @@
                         <div class="card">
                          
                           <div class="card_content">
-                            <h2 class="card_title">Pet Name Here</h2>
-                            <p class="card_text">Breed: </p>
-                            <p class="card_text">Toys: </p>
-                            <p class="card_text">Notes: </p>
+                            <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
+                            <p class="card_text">Breed:{{pet.breed}} </p>
+                            <p class="card_text">Toys:{{pet.toys}} </p>
+                            <p class="card_text">Notes:{{pet.notes}} </p>
                           </div>
                         </div>
                       </li>
@@ -52,13 +51,23 @@
                       
                 </ul>
               </div>
-
-
 </body>
-
-
 <div>
+<script src="./js/petHb.js"></script> --}}
 
 
-
-<script src="./js/petHb.js"></script>
+{{#each pets as |pet| }}
+<div class="row mb-4 project">
+  <li class="cards_item">
+                      <div class="card">
+                       
+                        <div class="card_content">
+                          <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
+                          <p class="card_text">Breed:{{pet.breed}} </p>
+                          <p class="card_text">Toys:{{pet.toys}} </p>
+                          <p class="card_text">Notes:{{pet.notes}} </p>
+                        </div>
+                      </div>
+   </li>
+</div>
+{{/each}}
