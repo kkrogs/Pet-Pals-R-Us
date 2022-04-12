@@ -23,6 +23,10 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+#h2Txt {
+font-size: 20px;
+color: white;
+}
 /* CSS added by Kourtney */
 
 /* Font */
