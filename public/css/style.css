@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  color: #272727;
+  
   font-family: 'Quicksand', serif;
   font-style: normal;
   font-weight: 400;
@@ -92,7 +92,10 @@ img {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+ 
+ 
+  
+
 }
 
 .cards_item {
@@ -119,14 +122,14 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border: 5px solid orange;
+
 }
 
 .card_content {
   padding: 2rem;
   background: white;
-  border-color: orange;
-  border: 5px;
-  border-style: solid;
+
 }
 
 .card_title {
