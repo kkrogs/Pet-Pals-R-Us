@@ -123,7 +123,10 @@ img {
 
 .card_content {
   padding: 2rem;
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background: white;
+  border-color: orange;
+  border: 5px;
+  border-style: solid;
 }
 
 .card_title {
