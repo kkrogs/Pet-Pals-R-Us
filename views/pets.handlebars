@@ -1,18 +1,38 @@
+<style>
+  :root{
+    background-color: black;
+    
+  }
+ #text{
+   color: black;
+   text-align: center;
+ }
+ #innerText{
+   color: white;
+   text-align: center;
+ }
+
+
+</style>
+
+
 {{#each pets as |pet| }}
-<div class="row mb-4 project">
-  <li class="cards_item">
-                      <div class="card">
+<div class=" align-items-center project">
+
+  <li class="col">
+                      <div class="col">
                        
                         <div class="card_content">
-                          <h2 class="card_title">Pet Name Here:{{pet.name}}</h2>
-                          <p class="card_text">Breed:{{pet.breed}} </p>
-                          <p class="card_text">Toys:{{pet.toys}} </p>
-                          <p class="card_text">Notes:{{pet.notes}} </p>
+                          <h2 class="card_title"><div id="text">Name:</div><div id="innerText">{{pet.name}}</div></h2>
+                          <p class="card_text"><div id="text"> Breed</div><div id="innerText">{{pet.breed}} </div></p>
+                          <p class="card_text"><div id="text"> Toys:</div><div id="innerText">{{pet.toys}}</div> </p>
+                          <p class="card_text"><div id="text"> Notes:</div><div id="innerText">{{pet.notes}}</div> </p>
                         </div>
+
                       </div>
    </li>
-</div>
+                    
 
+</div>
 {{/each}}
    
-
