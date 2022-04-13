@@ -29,3 +29,6 @@ Here is a link to view the repository from Github:
 https://github.com/kkrogs/Pet-Pals-R-Us
 
 Here is a link to view the deployed Application from Heroku: https://pet-pals-r-us.herokuapp.com/
+
+Here is a link to view the deployed Application from Heroku: https://pet-pals-r-us.herokuapp.com/
+
