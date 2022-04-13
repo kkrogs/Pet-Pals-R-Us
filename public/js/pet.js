@@ -10,7 +10,6 @@ const petFormHandler = async (event) => {
     // const owner = document.querySelector('#owner-title').value.trim(); //password, owner
   //Fetch api/pets and stringify the values that matches the API pets route in the back that will create a new one in the DB
     if (name && breed) {
-      alert("Pet added")
       //make a request of /api/pets, tell the backend that this is a post request method, and then send what we want to post which is the body
       const response = await fetch('/api/pets', {
         method: 'POST',
