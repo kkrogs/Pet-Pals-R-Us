@@ -1,45 +1,83 @@
+<style>
+  :root{
+    
+    background-image:url(https://i.pinimg.com/564x/1a/17/95/1a17955b6b3f1b6acccdddf387addd10.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  ::placeholder{
+    text-align: center;
+  }
+  .title{
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  #one{
+    color: rgb(0, 0, 0);
+  }
+  #add-pet,#searchbtn{
+    background-color: rgb(0, 140, 255);
+    border-radius: 20px;
+    border-color: rgb(10, 100, 145);
+    color: black;
+}
+#add-pet:hover,#back:hover{
+  transform: scale(1.2);
+  transition:all .6s ease-in-out;
+}
+
+#back{
+  background-color: rgb(0, 140,255);
+  border-color: rgb(5, 112, 10);
+  border-radius: 15px;
+}
+.input{
+  border-radius: 30px;
+}
+</style>
+
+
+
+
 <section>
+
   <h2 class="title">Add new pet</h2><hr>
       <li class="nav-item p-1 mx-4">
-        <a class="nav-link" href="/search">Search</a>
+        <a id="searchbtn"class="nav-link" href="/search">Search</a>
     </li>
 
   <form class="cards-item">
     <div>
-      <label for="post-title" class="mx-2">Pet name:</label>
+      <label id="one" for="post-title" class="mx-2">Pet name:</label>
       <input class="input" type="text" id="pet-title" name="post-title" placeholder="petName">
     </div>
 {{!-- tyoe  --}}
      <div>
-      <label for="post-title" class="mx-2">Breed:</label>
+      <label id="one" for="post-title" class="mx-2">Breed:</label>
       <input class="input" type="text" id="breed-title" name="post-title" placeholder="type">
     </div>
 
      <div>
-      <label for="post-title" class="mx-2">Toys:</label>
+      <label id="one"   for="post-title" class="mx-2">Toys:</label>
       <input class="input" type="text" id="toys-title" name="post-title" placeholder="tag">
     </div>
 
      <div>
-      <label for="post-title" class="mx-2">Notes:</label>
+      <label  id="one" for="post-title" class="mx-2">Notes:</label>
       <input class="input" type="text" id="notes-title" name="post-title" placeholder="notes">
     </div>
 
-     {{!-- <div>
-      <label for="post-title" class="mx-2">Pet owner name:</label>
-      <input class="input" type="text" id="owner-title" name="post-title" id="add-pet" placeholder="petOwner">
-    </div> --}}
+
  
 
 
-      <button type="submit" class="btn-success mt-3 mx-3 rounded" id="add-pet" href="/pets">Add pet</button>
+      <button  type="submit" class=" align-items-center btn-success mt-3 mx-3 rounded" id="add-pet" href="/pets">Add pet</button>
 
 
   </form>
 </section>
-
-{{!-- <a href="/dashboard"><button class="cards" id="back"> &larr; Back to Dashboard</button></a> --}}
   
-  <a href="/pets"><button class="cards" id="back"> &larr; my pets</button></a>
+  <a href="/pets"><button class="cards" id="back">  my pets</button></a>
 
 <script src="./js/pet.js"></script>
